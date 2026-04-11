@@ -3,8 +3,11 @@ import google.generativeai as genai
 
 # --- CONFIGURATION DE L'IA ---
 # Remplace par ta vraie clé API récupérée sur Google AI Studio
-API_KEY = "AIzaSyAWTRFpyf3PNvKYYlV7cPbRWpvSYxc8TMw"
-genai.configure(api_key=API_KEY)
+try:
+    API_KEY = st.secrets["GEMINI_API_KEY"]
+    genai.configure(api_key=API_KEY)
+except:
+    st.error("La clé API est manquante dans les Secrets de Streamlit.")
 model = genai.GenerativeModel('models/gemini-2.5-flash')
 
 # --- CONFIGURATION DE LA PAGE ---
