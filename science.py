@@ -20,7 +20,7 @@ st.markdown("""
         color: #0F52BA !important; /* Un beau bleu scientifique */
     }
     </style>
-    """, unsafe_allow_index=True)
+    """, unsafe_allow_html=True)
 
 # --- CONFIGURATION DE L'IA ---
 # Remplace par ta vraie clé API récupérée sur Google AI Studio
