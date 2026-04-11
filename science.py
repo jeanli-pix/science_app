@@ -5,7 +5,7 @@ import google.generativeai as genai
 # Remplace par ta vraie clé API récupérée sur Google AI Studio
 API_KEY = "AIzaSyAWTRFpyf3PNvKYYlV7cPbRWpvSYxc8TMw"
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
+model = genai.GenerativeModel('models/gemini-2.5-flash')
 
 # --- CONFIGURATION DE LA PAGE ---
 st.set_page_config(page_title="Apprendre avec l'IA", layout="wide")
