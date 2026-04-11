@@ -1,6 +1,27 @@
 import streamlit as st
 import google.generativeai as genai
 
+
+# --- STYLE CSS POUR LES FICHES ---
+st.markdown("""
+    <style>
+    /* On force le texte des fiches en noir et on ajoute un fond léger */
+    .stMarkdown p, .stMarkdown li {
+        color: #1E1E1E !important;
+    }
+    
+    /* Si tu utilises des containers pour tes fiches, on leur donne un style propre */
+    .element-container {
+        color: #1E1E1E;
+    }
+
+    /* Style spécifique pour le titre des fiches si besoin */
+    h1, h2, h3 {
+        color: #0F52BA !important; /* Un beau bleu scientifique */
+    }
+    </style>
+    """, unsafe_allow_index=True)
+
 # --- CONFIGURATION DE L'IA ---
 # Remplace par ta vraie clé API récupérée sur Google AI Studio
 try:
