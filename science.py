@@ -86,9 +86,10 @@ else:
     if not st.session_state.cards:
         st.info("Ta bibliothèque est vide. Utilise l'assistant pour créer des fiches !")
     else:
-        # Affichage propre en colonnes pour éviter la superposition brouillonne
+        # Affichage propre
         for i, card in enumerate(reversed(st.session_state.cards)):
             with st.container():
+                # AJOUT DU 'f' devant les guillemets pour activer les variables {}
                 st.markdown(f"""
                 <div class="card">
                     <strong>Fiche : {card['sujet']}</strong><br>
