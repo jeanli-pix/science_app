@@ -58,7 +58,7 @@ if "last_response" not in st.session_state:
     st.session_state.last_response = ""
 
 # --- INTERFACE ---
-st.title("🧠 IA Learning Assistant")
+st.title(" IA Learning Assistant")
 st.caption("Pose des questions, apprends, et sauvegarde tes connaissances.")
 
 col1, col2 = st.columns([2, 1])
@@ -90,7 +90,7 @@ with col2:
     st.subheader("📂 Mémoire & Fiches")
     
     # Bouton pour sauvegarder
-    if st.button("⭐ Cette réponse est intéressante !"):
+    if st.button(" Cette réponse est intéressante !"):
         if st.session_state.last_response:
             # On demande à l'IA de résumer la réponse en une fiche courte
             summary_prompt = f"Résume cette information en une fiche mémo très courte et structurée : {st.session_state.last_response}"
